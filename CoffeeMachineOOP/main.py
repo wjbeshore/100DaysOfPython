@@ -20,4 +20,5 @@ while True:
         for each in m.menu:
             if each.name == user_input:
                 if cmaker.is_resource_sufficient(each):
-                    cmaker.make_coffee(each)
+                    if mmachine.make_payment(each.cost):
+                        cmaker.make_coffee(each)
